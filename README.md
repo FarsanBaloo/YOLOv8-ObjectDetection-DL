@@ -2,18 +2,19 @@
 
 ## Overview
 
-This project demonstrates the implementation of **YOLOv8 (You Only Look Once, version 8)** for object detection as part of the **Deep Learning and Neural Networks course (DVA307)** at Mälardalen University, 2025.
-
-The lab focuses on understanding object detection frameworks, training a YOLO model, and evaluating its performance on image datasets.
+This project implements **YOLOv8** for object detection as part of the course
+**DVA307 – Deep Learning and Neural Networks** at Mälardalen University (2025).
+The focus is on understanding object detection frameworks, training YOLOv8,
+and evaluating performance on image data.
 
 ---
 
 ## Objectives
 
-* Understand the principles of **object detection** with deep learning.
-* Set up and train a **YOLOv8 model** using PyTorch and Ultralytics.
-* Experiment with hyperparameters and evaluate detection performance.
-* Visualize bounding boxes and class predictions.
+* Learn the YOLO object detection pipeline
+* Train and evaluate YOLOv8 using Ultralytics/PyTorch
+* Explore the YOLOv8 loss function and evaluation metrics
+* Analyze model performance and detection trade-offs
 
 ---
 
@@ -29,34 +30,33 @@ The lab focuses on understanding object detection frameworks, training a YOLO mo
 ## Repository Structure
 
 ```
-MDU_Lab3_Yolo.ipynb     # Jupyter Notebook with full implementation
-README.md               # Project documentation
+MDU_Lab3_Yolo.ipynb   # Notebook with training and evaluation
+README.md             # Documentation
 ```
 
 ---
 
 ## Key Learnings
 
-* How YOLO’s single-shot detection works compared to region-based detectors.
-* Importance of bounding box regression and class prediction.
-* Practical experience in training and evaluating modern object detection models.
+* **Loss function:** YOLOv8 combines IoU-based bounding box regression,
+  binary cross-entropy for classification, and objectness loss
+* **Anchor-free detection:** predicts bounding boxes directly at feature map
+  locations (no predefined anchors)
+* **Data augmentation:** mosaic, flipping, scaling, and color jitter applied
+  automatically during training
+* **Evaluation metrics:** mAP\@50, mAP@\[50:95], precision, and recall
+* **Post-processing:** confidence thresholds and Non-Maximum Suppression (NMS)
+  control which detections are kept
+* **Trade-offs:** larger input sizes improve accuracy but reduce inference speed
 
 ---
 
 ## Course Context
 
-This lab was part of:
-**DVA307 – Deep Learning and Neural Networks**
-Mälardalen University, 2025
-
-Assignment 3: *Implement and evaluate the YOLO object detection algorithm*.
+* **Course:** DVA307 – Deep Learning and Neural Networks
+* **Assignment 3:** Object Detection with YOLOv8
+* **Institution:** Mälardalen University, 2025
 
 ---
 
-
-## License
-
-MIT License (or specify another if required).
-
----
 
